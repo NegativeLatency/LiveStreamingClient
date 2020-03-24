@@ -13,10 +13,10 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/addr_input"
+        android:id="@+id/rec_addr_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="URI:://"
+        android:text="http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f20.mp4"
         android:inputType="textUri" />
 
     <LinearLayout
@@ -25,7 +25,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/streamer"
+            android:id="@+id/rec_stream_btn"
             android:text="Stream"/>
     </LinearLayout>
 </LinearLayout>
