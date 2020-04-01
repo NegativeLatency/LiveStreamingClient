@@ -15,6 +15,10 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -34,4 +38,15 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.github.pedroSG94.rtmp-rtsp-stream-client-java:rtplibrary:1.7.8'
     implementation 'com.shuyu:GSYVideoPlayer:7.1.3'
+    implementation 'com.google.ar:core:1.16.0'
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.15.0'
+    implementation 'com.google.ar.sceneform:core:1.15.0'
+    implementation 'com.github.appoly:ARCore-Location:1.2'
 }
+
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+sceneform.asset('assets/andy/andy.obj',
+        'default',
+        'assets/andy/andy.sfa',
+        'src/main/res/raw/andy')

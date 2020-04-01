@@ -1,6 +1,8 @@
 package com.example.livestreamingclient
 
 import android.Manifest
+import android.app.ActivityManager
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
@@ -15,9 +17,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val activityManager: ActivityManager = getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+        val configurationInfo = activityManager.getDeviceConfigurationInfo()
+        System.out.println("Version: ${configurationInfo.getGlEsVersion()}")
+        System.out.println(configurationInfo.reqGlEsVersion >= 0x30000)
+        System.err.println(String.format("%X", configurationInfo.reqGlEsVersion))
+
         // request camera
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO), 1)
+        }
+
+        // request GPS
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 1)
         }
 
 
@@ -28,6 +41,11 @@ class MainActivity : AppCompatActivity() {
 
         receiver.setOnClickListener {
             val intent = Intent(this, ReceiverActivity::class.java)
+            startActivity(intent)
+        }
+
+        ar.setOnClickListener {
+            val intent = Intent(this, ARActivity::class.java)
             startActivity(intent)
         }
     }
