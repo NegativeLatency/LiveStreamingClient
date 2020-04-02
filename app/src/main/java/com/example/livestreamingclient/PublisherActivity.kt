@@ -87,7 +87,7 @@ class PublisherActivity : AppCompatActivity(), ConnectCheckerRtmp, SurfaceHolder
                 rtmpCamera2.stopStream()
             }
             if (rtmpCamera2.prepareVideo() && rtmpCamera2.prepareAudio()) {
-                rtmpCamera2.startStream(addr_input.text.toString())
+                rtmpCamera2.startStream("rtmp://106.14.221.157:8935/live/jerry")
             }
         }
 

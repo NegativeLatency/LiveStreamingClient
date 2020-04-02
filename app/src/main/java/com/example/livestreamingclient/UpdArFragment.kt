@@ -4,16 +4,23 @@ import android.util.ArraySet
 import com.google.ar.core.Anchor
 import com.google.ar.core.HitResult
 import com.google.ar.core.Pose
+import com.google.ar.core.Session
 import com.google.ar.sceneform.AnchorNode
 import com.google.ar.sceneform.FrameTime
 import com.google.ar.sceneform.Node
 import com.google.ar.sceneform.rendering.Renderable
 import com.google.ar.sceneform.ux.ArFragment
+import java.util.*
 
 class UpdArFragment : ArFragment {
+
     val anchorSet: ArraySet<AnchorNode> = ArraySet()
 
     constructor() : super() {}
+
+    override fun getSessionFeatures(): MutableSet<Session.Feature> {
+        return EnumSet.of(Session.Feature.SHARED_CAMERA)
+    }
 
     override fun onUpdate(frameTime: FrameTime) {
         super.onUpdate(frameTime)

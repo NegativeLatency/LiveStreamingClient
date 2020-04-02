@@ -21,7 +21,7 @@ class ReceiverActivity : AppCompatActivity() {
 
         videoPlayer = rec_surface
         rec_stream_btn.setOnClickListener {
-            videoPlayer.setUp(rec_addr_input.text.toString(), true, "测试视频")
+            videoPlayer.setUp("rtmp://106.14.221.157:8935/live/jerry", true, "测试视频")
             videoPlayer.startPlayLogic()
         }
 
