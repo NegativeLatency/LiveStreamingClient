@@ -1,11 +1,10 @@
-package com.example.livestreamingclient
+package com.example.livestreamingclient.Activity
 
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.shuyu.gsyvideoplayer.GSYBaseActivityDetail
+import com.example.livestreamingclient.R
 import com.shuyu.gsyvideoplayer.GSYVideoManager
 import com.shuyu.gsyvideoplayer.utils.OrientationUtils
 import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer

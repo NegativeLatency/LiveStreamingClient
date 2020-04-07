@@ -1,13 +1,10 @@
-package com.example.livestreamingclient
+package com.example.livestreamingclient.Activity
 
-import android.Manifest
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.SurfaceHolder
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
+import com.example.livestreamingclient.R
 import com.pedro.rtplibrary.rtmp.RtmpCamera2
 import kotlinx.android.synthetic.main.activity_publisher.*
 import net.ossrs.rtmp.ConnectCheckerRtmp
