@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ARActivity">
+
+    <fragment android:name="com.example.livestreamingclient.fragment.UpARFragment"
+        android:id="@+id/ux_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <Button
+        android:id="@+id/startstream"
+        style="@android:style/Widget.Material.Button.Colored"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="Stream" />
+
+    <Button
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:alpha="1"
+        />
+
+    <Button
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:alpha="1"
+        />
+
+</RelativeLayout>

@@ -72,7 +72,7 @@ class UpARFragment : ArFragment {
         anchorNode.setParent(this.arSceneView.scene)
 
         val newBtn = ImageButton(this.context)
-        newBtn.setImageResource(R.drawable.ring)
+        newBtn.setImageResource(R.drawable.ic_launcher_foreground)
 
         val lp = RelativeLayout.LayoutParams(BtnSize, BtnSize)
         newBtn.layoutParams = lp

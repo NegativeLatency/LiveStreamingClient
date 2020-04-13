@@ -21,6 +21,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    aaptOptions {
+        noCompress "tflite"
+    }
 }
 
 dependencies {
@@ -41,4 +44,8 @@ dependencies {
     implementation 'com.github.razerdp:BasePopup:2.2.1'
     implementation 'com.github.razerdp:BasePopup-compat-lifecycle:2.2.1'
     implementation 'com.github.razerdp:BasePopup-compat-androidx:2.2.1'
+
+    implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly'
+    implementation('org.tensorflow:tensorflow-lite-gpu:0.0.0-nightly')
+    implementation('org.tensorflow:tensorflow-lite-support:0.0.0-nightly')
 }

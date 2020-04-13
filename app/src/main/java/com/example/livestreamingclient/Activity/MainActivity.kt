@@ -31,6 +31,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ReceiverActivity::class.java)
             startActivity(intent)
         }
+
+        tflite.setOnClickListener {
+            val intent = Intent(this, TFLiteActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onRequestPermissionsResult(
